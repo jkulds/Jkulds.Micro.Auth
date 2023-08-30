@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jkulds.Micro.Auth.Api", "Jkulds.Micro.Auth.Api\Jkulds.Micro.Auth.Api.csproj", "{D5940FC6-606E-4550-849C-7BEC9806ADDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jkulds.Micro.Auth.Business", "Jkulds.Micro.Auth.Business\Jkulds.Micro.Auth.Business.csproj", "{48F41DCF-2386-456F-897F-6A251A6B5D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jkulds.Micro.Auth.Data", "Jkulds.Micro.Auth.Data\Jkulds.Micro.Auth.Data.csproj", "{939A456E-A214-42CD-8903-D13816554EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jkulds.Micro.Auth.Postgres", "Jkulds.Micro.Auth.Postgres\Jkulds.Micro.Auth.Postgres.csproj", "{408FD833-749B-4969-A81E-AC02AD547E3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jkulds.Micro.MessageContracts", "Jkulds.Micro.MessageContracts\Jkulds.Micro.MessageContracts.csproj", "{A13D7DF1-6302-4A5E-9384-C7A783C67A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jkulds.Micro.Base", "Jkulds.Micro.Base\Jkulds.Micro.Base.csproj", "{BB861942-9EED-4F16-9E5F-6084947584C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90ECB62C-9182-4165-8441-DF828D6B29A8}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5940FC6-606E-4550-849C-7BEC9806ADDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5940FC6-606E-4550-849C-7BEC9806ADDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5940FC6-606E-4550-849C-7BEC9806ADDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5940FC6-606E-4550-849C-7BEC9806ADDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F41DCF-2386-456F-897F-6A251A6B5D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F41DCF-2386-456F-897F-6A251A6B5D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F41DCF-2386-456F-897F-6A251A6B5D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F41DCF-2386-456F-897F-6A251A6B5D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939A456E-A214-42CD-8903-D13816554EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939A456E-A214-42CD-8903-D13816554EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939A456E-A214-42CD-8903-D13816554EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939A456E-A214-42CD-8903-D13816554EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408FD833-749B-4969-A81E-AC02AD547E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408FD833-749B-4969-A81E-AC02AD547E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408FD833-749B-4969-A81E-AC02AD547E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408FD833-749B-4969-A81E-AC02AD547E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13D7DF1-6302-4A5E-9384-C7A783C67A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13D7DF1-6302-4A5E-9384-C7A783C67A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13D7DF1-6302-4A5E-9384-C7A783C67A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13D7DF1-6302-4A5E-9384-C7A783C67A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB861942-9EED-4F16-9E5F-6084947584C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB861942-9EED-4F16-9E5F-6084947584C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB861942-9EED-4F16-9E5F-6084947584C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB861942-9EED-4F16-9E5F-6084947584C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

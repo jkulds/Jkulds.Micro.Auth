@@ -1,0 +1,74 @@
+networks:
+  network_test:
+
+services:
+  api:
+    image: jkulds.micro.auth.api
+    build:
+      dockerfile: ./Jkulds.Micro.Auth.Api/Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbit:
+        condition: service_healthy
+    environment:
+      - INDOCKER=1
+    networks:
+      - network_test
+
+  redis:
+    image: redis/redis-stack
+    ports:
+      - '6379:6379'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    healthcheck:
+      test: [ "CMD", "redis-cli","ping" ]
+    networks:
+      - network_test
+      
+  rabbit:
+    image: rabbitmq:3.13-rc-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - ./.rabbitmq/data/:/var/lib/rabbitmq
+    networks:
+      - network_test
+  
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER}" ]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+    networks:
+      - network_test
+
+
+volumes:
+  db:
+    driver: local
+    
