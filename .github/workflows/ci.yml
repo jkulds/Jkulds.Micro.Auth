@@ -7,23 +7,24 @@ jobs:
 
     env:
       BUILD_CONFIG: 'Release'
-      SOLUTION_NAME: 'Jkulds.Micro.Auth.Api'
+      SOLUTION_NAME: 'Jkulds.Micro.Auth'
+      API_PROJECT_NAME: 'Jkulds.Micro.Auth.Api'
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.2.0
-
-      - name: Restore dependencies
-        run: nuget restore ./$SOLUTION_NAME/$SOLUTION_NAME.sln
-
+        
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0
 
-      - name: Build
-        run: dotnet build ./$SOLUTION_NAME/$SOLUTION_NAME.sln --configuration $BUILD_CONFIG
+      - name: Restore solution
+        run: dotnet restore $SOLUTION_NAME.sln
+
+      - name: Restore api project
+        run: dotnet restore ./$API_PROJECT_NAME/$API_PROJECT_NAME.csproj
+        
+      - name: Build api project
+        run: dotnet build ./$API_PROJECT_NAME/$API_PROJECT_NAME.csproj --configuration $BUILD_CONFIG
