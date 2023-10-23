@@ -2,12 +2,12 @@ using Jkulds.Micro.Auth.Api.Installers;
 using Jkulds.Micro.Auth.Api.Middleware;
 using Jkulds.Micro.Auth.Business.Installers;
 using Jkulds.Micro.Auth.Data;
+using Jkulds.Micro.Auth.Postgres.Installers;
 using Jkulds.Micro.Options.Installers;
 using Jkulds.Micro.Options.Jwt;
+using Jkulds.Micro.Options.MassTransit;
 using Jkulds.Micro.Options.Postgres;
 using Jkulds.Micro.Options.Redis;
-using Jkulds.Micro.Auth.Postgres.Installers;
-using Jkulds.Micro.Options.MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,7 +70,5 @@ app.UseCors(x => x
     .AllowAnyHeader());
 
 app.MapControllers();
-
-app.UsePathBase("/");
 
 app.Run();

@@ -1,8 +1,6 @@
 using System.Net;
-using System.Text.Json;
-using Jkulds.Micro.Auth.Api.Controllers.Models.Api.Response;
-using Jkulds.Micro.Auth.Business.Services.Exceptions;
 using Jkulds.Micro.Auth.Api.Controllers.Models.Api;
+using Jkulds.Micro.Auth.Business.Services.AuthService.Exceptions;
 
 namespace Jkulds.Micro.Auth.Api.Middleware;
 

@@ -1,10 +1,11 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
 using Jkulds.Micro.Auth.Business.Producers;
-using Jkulds.Micro.Auth.Business.Services.Dto;
-using Jkulds.Micro.Auth.Business.Services.Exceptions;
-using Jkulds.Micro.Auth.Business.Services.Exceptions.Base;
+using Jkulds.Micro.Auth.Business.Services.AuthService.Dto;
+using Jkulds.Micro.Auth.Business.Services.AuthService.Exceptions;
+using Jkulds.Micro.Auth.Business.Services.AuthService.Exceptions.Base;
 using Jkulds.Micro.Auth.Data.Models.Identity;
 using Jkulds.Micro.Base.Enum;
 using Jkulds.Micro.MessageContracts.Notifications;
@@ -213,10 +214,7 @@ public class AuthService : IAuthService
             {
                 new Claim("id", apiUser.Id.ToString()), 
                 new Claim(JwtRegisteredClaimNames.Sub, apiUser.Email!),
-                new Claim(JwtRegisteredClaimNames.Email, apiUser.Email!), 
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Name, apiUser.UserName!), 
-                new Claim(ClaimTypes.Name, apiUser.UserName!)
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             }
         );
 
@@ -227,14 +225,15 @@ public class AuthService : IAuthService
             claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, role));
         }
 
-        var symmetricKey = new SymmetricSecurityKey(_jwtOptions.KeyBytes);
+        var symmetricKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtOptions.Key));
 
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = claimsIdentity,
             Issuer = _jwtOptions.Issuer,
             Expires = DateTime.UtcNow.Add(_jwtOptions.TokenExpire),
-            SigningCredentials = new SigningCredentials(symmetricKey, _jwtOptions.Algorithm)
+            SigningCredentials = new SigningCredentials(symmetricKey, _jwtOptions.Algorithm),
+            Audience = _jwtOptions.Audience,
         };
 
         var token = jwtTokenHandler.CreateToken(tokenDescriptor);

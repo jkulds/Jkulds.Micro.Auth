@@ -1,4 +1,4 @@
-﻿namespace Jkulds.Micro.Auth.Business.Services.Exceptions.Base;
+﻿namespace Jkulds.Micro.Auth.Business.Services.AuthService.Exceptions.Base;
 
 public static class BaseExceptionMessages
 {

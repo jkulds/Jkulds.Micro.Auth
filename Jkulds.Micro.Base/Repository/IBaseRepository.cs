@@ -1,6 +1,4 @@
-﻿using Jkulds.Micro.Base.Entity;
-
-namespace Jkulds.Micro.Base.Repository;
+﻿namespace Jkulds.Micro.Base.Repository;
 
 public interface IBaseRepository<T>
 {

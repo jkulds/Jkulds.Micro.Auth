@@ -1,5 +1,4 @@
 ﻿using Jkulds.Micro.Base.Dto;
-using Jkulds.Micro.Base.Repository;
 
 namespace Jkulds.Micro.Base.Service;
 

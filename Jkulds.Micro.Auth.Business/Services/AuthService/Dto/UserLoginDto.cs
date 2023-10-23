@@ -1,4 +1,4 @@
-﻿namespace Jkulds.Micro.Auth.Business.Services.Dto;
+﻿namespace Jkulds.Micro.Auth.Business.Services.AuthService.Dto;
 
 public class UserLoginDto
 {

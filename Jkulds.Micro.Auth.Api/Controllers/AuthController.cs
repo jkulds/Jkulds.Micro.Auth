@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Jkulds.Micro.Auth.Business.Services;
-using Jkulds.Micro.Auth.Business.Services.Dto;
 using Jkulds.Micro.Auth.Api.Controllers.Models.Api;
 using Jkulds.Micro.Auth.Api.Controllers.Models.Api.Request;
 using Jkulds.Micro.Auth.Api.Controllers.Models.Api.Response;
 using Jkulds.Micro.Auth.Api.Helpers;
+using Jkulds.Micro.Auth.Business.Services.AuthService;
+using Jkulds.Micro.Auth.Business.Services.AuthService.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

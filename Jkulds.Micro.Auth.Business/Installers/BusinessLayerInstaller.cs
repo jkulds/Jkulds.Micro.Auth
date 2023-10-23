@@ -1,5 +1,4 @@
 ﻿using Jkulds.Micro.Auth.Business.Producers;
-using Jkulds.Micro.Auth.Business.Services;
 using Jkulds.Micro.Auth.Business.Services.AuthService;
 using Microsoft.Extensions.DependencyInjection;
 

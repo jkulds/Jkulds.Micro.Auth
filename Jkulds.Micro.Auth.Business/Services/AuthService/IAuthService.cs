@@ -1,6 +1,6 @@
-﻿using Jkulds.Micro.Auth.Business.Services.Dto;
+﻿using Jkulds.Micro.Auth.Business.Services.AuthService.Dto;
 
-namespace Jkulds.Micro.Auth.Business.Services;
+namespace Jkulds.Micro.Auth.Business.Services.AuthService;
 
 public interface IAuthService
 {

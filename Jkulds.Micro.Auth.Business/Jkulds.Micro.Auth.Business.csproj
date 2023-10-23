@@ -13,7 +13,7 @@
 
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="12.0.1" />
-      <PackageReference Include="Jkulds.Micro.Options" Version="1.0.0" />
+      <PackageReference Include="Jkulds.Micro.Options" Version="1.0.2" />
       <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.32.2" />
       <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.2" />
     </ItemGroup>

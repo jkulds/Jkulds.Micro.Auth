@@ -1,6 +1,6 @@
-﻿using Jkulds.Micro.Auth.Business.Services.Exceptions.Base;
+﻿using Jkulds.Micro.Auth.Business.Services.AuthService.Exceptions.Base;
 
-namespace Jkulds.Micro.Auth.Business.Services.Exceptions;
+namespace Jkulds.Micro.Auth.Business.Services.AuthService.Exceptions;
 
 public class UserRegistrationException : AuthBaseException
 {

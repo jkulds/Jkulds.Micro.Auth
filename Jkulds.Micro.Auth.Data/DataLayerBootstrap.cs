@@ -1,6 +1,5 @@
 ﻿using Jkulds.Micro.Auth.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Jkulds.Micro.Auth.Data;
 

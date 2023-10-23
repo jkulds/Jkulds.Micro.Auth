@@ -18,9 +18,6 @@ public static class NpgsqlInstaller
             x =>
             {
                 var connectionString = options.GetConnectionString();
-                Console.WriteLine(connectionString);
-                Console.WriteLine(Environment.GetEnvironmentVariable("ASPNETCORE_URLS"));
-                Console.WriteLine(Environment.GetEnvironmentVariable("INDOCKER"));
                 x.UseNpgsql(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly(Assembly.GetExecutingAssembly().GetName().Name));
             });
     }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Jkulds.Micro.Auth.Business.Services.Dto;
 using Jkulds.Micro.Auth.Api.Controllers.Models.Api.Request;
 using Jkulds.Micro.Auth.Api.Controllers.Models.Api.Response;
+using Jkulds.Micro.Auth.Business.Services.AuthService.Dto;
 using Jkulds.Micro.Options.Base;
 
 namespace Jkulds.Micro.Auth.Api.Mapper;
